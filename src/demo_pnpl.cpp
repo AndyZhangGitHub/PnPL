@@ -1,7 +1,9 @@
 #include <opencv2/opencv.hpp>
 #include <Eigen/Dense>
 #include "pnpl.h"
+#include <iostream>
 
+using namespace std;
 void build_data(std::vector<cv::Point3f>& pts3d, std::vector<cv::Point2f>& pts2d,
                 std::vector<cv::Vec6f>& lns3d, std::vector<cv::Vec4f>& lns2d,
                 cv::Mat& K)
@@ -73,6 +75,11 @@ int main()
     std::vector<cv::Vec4f> lns2d;
     cv::Mat K;
     build_data(pts3d,pts2d,lns3d,lns2d,K);
+
+
+    cout<<"Hello github"<<endl;
+
+
 
     // for(const auto p:pts2d)
     //     std::cout<<p<<" ";
